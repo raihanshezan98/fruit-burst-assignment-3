@@ -16,37 +16,55 @@
                 extend: {
                     colors: {
                         fruit_primary: '#F85559',
-                    }
-                }
-            }
+                    },
+                    backgroundImage: {
+                        slider_1: "url('images/banner1.png')",
+                        slider_2: "url('images/banner2.png')",
+                        slider_3: "url('images/banner3.png')",
+                        slider_4: "url('images/banner4.png')",
+                    },
+                },
+            },
         }
     </script>
     <!-- lato (google font) -->
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300..800&display=swap');
 
-        .lato-regular {
-            font-family: "Lato", sans-serif;
+        .open-sans-regular {
+            font-family: "Open Sans", sans-serif;
+            font-optical-sizing: auto;
             font-weight: 400;
             font-style: normal;
+            font-variation-settings:
+                "wdth" 100;
         }
 
-        .lato-medium {
-            font-family: "Lato", sans-serif;
+        .open-sans-medium {
+            font-family: "Open Sans", sans-serif;
+            font-optical-sizing: auto;
             font-weight: 500;
             font-style: normal;
+            font-variation-settings:
+                "wdth" 100;
         }
 
-        .lato-bold {
-            font-family: "Lato", sans-serif;
+        .open-sans-bold {
+            font-family: "Open Sans", sans-serif;
+            font-optical-sizing: auto;
             font-weight: 700;
             font-style: normal;
+            font-variation-settings:
+                "wdth" 100;
         }
 
-        .lato-extrabold {
-            font-family: "Lato", sans-serif;
+        .open-sans-extrabold {
+            font-family: "Open Sans", sans-serif;
+            font-optical-sizing: auto;
             font-weight: 800;
             font-style: normal;
+            font-variation-settings:
+                "wdth" 100;
         }
     </style>
 </head>
@@ -56,9 +74,9 @@
     <header class="max-w-[1440px] mx-auto px-2">
 
         <nav class="mt-4">
-            <div class="navbar justify-between text-black lg:bg-fruit_primary rounded-full lg:text-white py-6 lg:px-10">
+            <div class="navbar justify-between text-black lg:bg-fruit_primary rounded-full lg:text-white py-5 lg:px-10">
                 <div class="navbar-start hidden lg:flex">
-                    <ul class="menu menu-horizontal px-1 lato-medium text-lg">
+                    <ul class="menu menu-horizontal px-1 open-sans-medium text-lg">
                         <li><a>Home</a></li>
                         <li><a>About Us</a></li>
                         <li><a>Shop</a></li>
@@ -68,7 +86,7 @@
                 <div class="navbar-center">
                     <a href="#" class="btn btn-ghost h-auto">
                         <img src="images/logo.png" alt="fruit burst logo" class="w-8 md:w-12 lg:w-14">
-                        <p class="text-xl md:text-[40px] lato-bold">Fruit Burst</p>
+                        <p class="text-xl md:text-[40px] open-sans-bold">Fruit Burst</p>
                     </a>
                 </div>
                 <div class="navbar-end">
@@ -102,6 +120,78 @@
                 </div>
             </div>
         </nav>
+
+        <!-- banner section  -->
+        <div class="carousel w-full lg:h-[600px] rounded-3xl mt-10">
+            <!-- slider-1 -->
+            <div id="slide1" class="carousel-item relative hero bg-slider_1">
+                <div class="hero-overlay bg-transparent bg-gradient-to-b from-[#121212] from-[-14%]"></div>
+                <div class="hero-content text-center text-white">
+                    <div class="max-w-2xl">
+                        <h1 class="mb-6 text-7xl open-sans-extrabold">Exotic tastes at your doorstep</h1>
+                        <p class="mb-8 text-xl open-sans-medium ">We supply highly quality organic products.</p>
+                        <button
+                            class="btn bg-fruit_primary border-none text-white text-xl px-8 py-4 h-auto open-sans-bold">Shop
+                            Now</button>
+                    </div>
+                </div>
+                <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                    <a href="#slide4" class="btn btn-circle bg-[#121212] text-white border-none">❮</a>
+                    <a href="#slide2" class="btn btn-circle bg-[#121212] text-white border-none">❯</a>
+                </div>
+            </div>
+            <!-- slider-2 -->
+            <div id="slide2" class="carousel-item relative hero bg-slider_2">
+                <div class="hero-overlay bg-transparent bg-gradient-to-b from-[#121212] from-[-14%]"></div>
+                <div class="hero-content text-center text-white">
+                    <div class="max-w-2xl">
+                        <h1 class="mb-6 text-7xl open-sans-extrabold">Exotic tastes at your doorstep</h1>
+                        <p class="mb-8 text-xl open-sans-medium ">We supply highly quality organic products.</p>
+                        <button
+                            class="btn bg-fruit_primary border-none text-white text-xl px-8 py-4 h-auto open-sans-bold">Shop
+                            Now</button>
+                    </div>
+                </div>
+                <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                    <a href="#slide1" class="btn btn-circle bg-[#121212] text-white border-none">❮</a>
+                    <a href="#slide3" class="btn btn-circle bg-[#121212] text-white border-none">❯</a>
+                </div>
+            </div>
+            <!-- slider-3 -->
+            <div id="slide3" class="carousel-item relative hero bg-slider_3">
+                <div class="hero-overlay bg-transparent bg-gradient-to-b from-[#121212] from-[-14%]"></div>
+                <div class="hero-content text-center text-white">
+                    <div class="max-w-2xl">
+                        <h1 class="mb-6 text-7xl open-sans-extrabold">Exotic tastes at your doorstep</h1>
+                        <p class="mb-8 text-xl open-sans-medium ">We supply highly quality organic products.</p>
+                        <button
+                            class="btn bg-fruit_primary border-none text-white text-xl px-8 py-4 h-auto open-sans-bold">Shop
+                            Now</button>
+                    </div>
+                </div>
+                <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                    <a href="#slide2" class="btn btn-circle bg-[#121212] text-white border-none">❮</a>
+                    <a href="#slide4" class="btn btn-circle bg-[#121212] text-white border-none">❯</a>
+                </div>
+            </div>
+            <!-- slider-4 -->
+            <div id="slide4" class="carousel-item relative hero bg-slider_4">
+                <div class="hero-overlay bg-transparent bg-gradient-to-b from-[#121212] from-[-14%]"></div>
+                <div class="hero-content text-center text-white">
+                    <div class="max-w-2xl">
+                        <h1 class="mb-6 text-7xl open-sans-extrabold">Exotic tastes at your doorstep</h1>
+                        <p class="mb-8 text-xl open-sans-medium ">We supply highly quality organic products.</p>
+                        <button
+                            class="btn bg-fruit_primary border-none text-white text-xl px-8 py-4 h-auto open-sans-bold">Shop
+                            Now</button>
+                    </div>
+                </div>
+                <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                    <a href="#slide3" class="btn btn-circle bg-[#121212] text-white border-none">❮</a>
+                    <a href="#slide1" class="btn btn-circle bg-[#121212] text-white border-none">❯</a>
+                </div>
+            </div>
+        </div>
 
     </header>
 
