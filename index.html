@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fruit Burst Website</title>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <!-- daisyUI and tailwindcss CDN  -->
+    <!-- flowbite, daisyUI and tailwindcss CDN  -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.10.2/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- tailwindcss custom config -->
@@ -27,7 +28,7 @@
             },
         }
     </script>
-    <!-- lato (google font) -->
+    <!-- open-sans (google font) -->
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300..800&display=swap');
 
@@ -71,10 +72,12 @@
 
 <body>
 
-    <header class="max-w-[1440px] mx-auto px-2">
+    <header>
 
-        <nav class="mt-4">
-            <div class="navbar justify-between text-black lg:bg-fruit_primary rounded-full lg:text-white py-5 lg:px-10">
+        <!-- navbar  -->
+        <nav class="max-w-[1440px] mx-auto px-2">
+            <div
+                class="navbar justify-between text-black lg:bg-fruit_primary rounded-full lg:text-white py-5 lg:px-10 mt-4">
                 <div class="navbar-start hidden lg:flex">
                     <ul class="menu menu-horizontal px-1 open-sans-medium text-lg">
                         <li><a>Home</a></li>
@@ -91,8 +94,8 @@
                 </div>
                 <div class="navbar-end">
                     <div class="hidden lg:flex">
-                        <label class="input input-bordered flex items-center gap-2 rounded-3xl pl-7">
-                            <input type="search" class="grow text-black" placeholder="Search here" />
+                        <label class="input input-bordered flex items-center gap-2 rounded-3xl pl-6">
+                            <input type="search" class="grow text-black border-none p-0" placeholder="Search here" />
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                 fill="none">
                                 <path
@@ -121,79 +124,116 @@
             </div>
         </nav>
 
-        <!-- banner section  -->
-        <div class="carousel w-full lg:h-[600px] rounded-3xl mt-10">
-            <!-- slider-1 -->
-            <div id="slide1" class="carousel-item relative hero bg-slider_1">
-                <div class="hero-overlay bg-transparent bg-gradient-to-b from-[#121212] from-[-14%]"></div>
-                <div class="hero-content text-center text-white">
-                    <div class="max-w-2xl">
-                        <h1 class="mb-6 text-7xl open-sans-extrabold">Exotic tastes at your doorstep</h1>
-                        <p class="mb-8 text-xl open-sans-medium ">We supply highly quality organic products.</p>
-                        <button
-                            class="btn bg-fruit_primary border-none text-white text-xl px-8 py-4 h-auto open-sans-bold">Shop
-                            Now</button>
+        <!-- main-hero-banner section  -->
+        <section class="max-w-[1440px] mx-auto px-2">
+
+            <!-- carousel -->
+            <div class="carousel w-full h-56 md:h-96 lg:h-[600px] rounded-3xl mt-10 relative">
+                <!-- slider-1 -->
+                <div id="slide1" class="carousel-item relative hero bg-slider_1">
+                    <div class="hero-overlay bg-transparent bg-gradient-to-b from-[#121212] from-[-14%]"></div>
+                    <div class="hero-content text-center text-white lg:pb-24">
+                        <div class="max-w-2xl">
+                            <h1 class="mb-6 text-7xl open-sans-extrabold">Exotic tastes at your doorstep
+                            </h1>
+                            <p class="mb-8 text-xl open-sans-medium">We supply highly quality organic
+                                products.</p>
+                            <button
+                                class="btn bg-fruit_primary border-none text-white text-xl px-8 py-4 h-auto open-sans-bold">Shop
+                                Now</button>
+                        </div>
+                    </div>
+                    <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                        <a href="#slide4" class="btn btn-circle bg-[#121212] text-white border-none">❮</a>
+                        <a href="#slide2" class="btn btn-circle bg-[#121212] text-white border-none">❯</a>
                     </div>
                 </div>
-                <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                    <a href="#slide4" class="btn btn-circle bg-[#121212] text-white border-none">❮</a>
-                    <a href="#slide2" class="btn btn-circle bg-[#121212] text-white border-none">❯</a>
-                </div>
-            </div>
-            <!-- slider-2 -->
-            <div id="slide2" class="carousel-item relative hero bg-slider_2">
-                <div class="hero-overlay bg-transparent bg-gradient-to-b from-[#121212] from-[-14%]"></div>
-                <div class="hero-content text-center text-white">
-                    <div class="max-w-2xl">
-                        <h1 class="mb-6 text-7xl open-sans-extrabold">Exotic tastes at your doorstep</h1>
-                        <p class="mb-8 text-xl open-sans-medium ">We supply highly quality organic products.</p>
-                        <button
-                            class="btn bg-fruit_primary border-none text-white text-xl px-8 py-4 h-auto open-sans-bold">Shop
-                            Now</button>
+                <!-- slider-2 -->
+                <div id="slide2" class="carousel-item relative hero bg-slider_2">
+                    <div class="hero-overlay bg-transparent bg-gradient-to-b from-[#121212] from-[-14%]"></div>
+                    <div class="hero-content text-center text-white lg:pb-24">
+                        <div class="max-w-2xl">
+                            <h1 class="mb-6 text-7xl open-sans-extrabold">Exotic tastes at your doorstep</h1>
+                            <p class="mb-8 text-xl open-sans-medium">We supply highly quality organic products.</p>
+                            <button
+                                class="btn bg-fruit_primary border-none text-white text-xl px-8 py-4 h-auto open-sans-bold">Shop
+                                Now</button>
+                        </div>
+                    </div>
+                    <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                        <a href="#slide1" class="btn btn-circle bg-[#121212] text-white border-none">❮</a>
+                        <a href="#slide3" class="btn btn-circle bg-[#121212] text-white border-none">❯</a>
                     </div>
                 </div>
-                <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                    <a href="#slide1" class="btn btn-circle bg-[#121212] text-white border-none">❮</a>
-                    <a href="#slide3" class="btn btn-circle bg-[#121212] text-white border-none">❯</a>
-                </div>
-            </div>
-            <!-- slider-3 -->
-            <div id="slide3" class="carousel-item relative hero bg-slider_3">
-                <div class="hero-overlay bg-transparent bg-gradient-to-b from-[#121212] from-[-14%]"></div>
-                <div class="hero-content text-center text-white">
-                    <div class="max-w-2xl">
-                        <h1 class="mb-6 text-7xl open-sans-extrabold">Exotic tastes at your doorstep</h1>
-                        <p class="mb-8 text-xl open-sans-medium ">We supply highly quality organic products.</p>
-                        <button
-                            class="btn bg-fruit_primary border-none text-white text-xl px-8 py-4 h-auto open-sans-bold">Shop
-                            Now</button>
+                <!-- slider-3 -->
+                <div id="slide3" class="carousel-item relative hero bg-slider_3">
+                    <div class="hero-overlay bg-transparent bg-gradient-to-b from-[#121212] from-[-14%]"></div>
+                    <div class="hero-content text-center text-white lg:pb-24">
+                        <div class="max-w-2xl">
+                            <h1 class="mb-6 text-7xl open-sans-extrabold">Exotic tastes at your doorstep</h1>
+                            <p class="mb-8 text-xl open-sans-medium">We supply highly quality organic products.</p>
+                            <button
+                                class="btn bg-fruit_primary border-none text-white text-xl px-8 py-4 h-auto open-sans-bold">Shop
+                                Now</button>
+                        </div>
+                    </div>
+                    <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                        <a href="#slide2" class="btn btn-circle bg-[#121212] text-white border-none">❮</a>
+                        <a href="#slide4" class="btn btn-circle bg-[#121212] text-white border-none">❯</a>
                     </div>
                 </div>
-                <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                    <a href="#slide2" class="btn btn-circle bg-[#121212] text-white border-none">❮</a>
-                    <a href="#slide4" class="btn btn-circle bg-[#121212] text-white border-none">❯</a>
-                </div>
-            </div>
-            <!-- slider-4 -->
-            <div id="slide4" class="carousel-item relative hero bg-slider_4">
-                <div class="hero-overlay bg-transparent bg-gradient-to-b from-[#121212] from-[-14%]"></div>
-                <div class="hero-content text-center text-white">
-                    <div class="max-w-2xl">
-                        <h1 class="mb-6 text-7xl open-sans-extrabold">Exotic tastes at your doorstep</h1>
-                        <p class="mb-8 text-xl open-sans-medium ">We supply highly quality organic products.</p>
-                        <button
-                            class="btn bg-fruit_primary border-none text-white text-xl px-8 py-4 h-auto open-sans-bold">Shop
-                            Now</button>
+                <!-- slider-4 -->
+                <div id="slide4" class="carousel-item relative hero bg-slider_4">
+                    <div class="hero-overlay bg-transparent bg-gradient-to-b from-[#121212] from-[-14%]"></div>
+                    <div class="hero-content text-center text-white lg:pb-24">
+                        <div class="max-w-2xl">
+                            <h1 class="mb-6 text-7xl open-sans-extrabold">Exotic tastes at your doorstep</h1>
+                            <p class="mb-8 text-xl open-sans-medium">We supply highly quality organic products.</p>
+                            <button
+                                class="btn bg-fruit_primary border-none text-white text-xl px-8 py-4 h-auto open-sans-bold">Shop
+                                Now</button>
+                        </div>
+                    </div>
+                    <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                        <a href="#slide3" class="btn btn-circle bg-[#121212] text-white border-none">❮</a>
+                        <a href="#slide1" class="btn btn-circle bg-[#121212] text-white border-none">❯</a>
                     </div>
                 </div>
-                <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                    <a href="#slide3" class="btn btn-circle bg-[#121212] text-white border-none">❮</a>
-                    <a href="#slide1" class="btn btn-circle bg-[#121212] text-white border-none">❯</a>
+            </div>
+
+            <!-- fruit bar  -->
+             <div class="hidden lg:flex">
+                <div
+                    class="w-[85%] mx-auto bg-white rounded-2xl flex justify-evenly items-center absolute -mt-32 left-0 right-0 py-10 px-5 shadow-[0_8px_60px_0_rgba(0,0,0,0.05)]">
+                    <div class="flex flex-col items-center">
+                        <figure><img src="images/fruit1.png" alt=""></figure>
+                        <h2 class="text-[#121212CC] text-xl open-sans-medium">Red Grape</h2>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <figure><img src="images/fruit2.png" alt=""></figure>
+                        <h2 class="text-[#121212CC] text-xl open-sans-medium">Orange</h2>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <figure><img src="images/fruit3.png" alt=""></figure>
+                        <h2 class="text-[#121212CC] text-xl open-sans-medium">Mango</h2>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <figure><img src="images/fruit4.png" alt=""></figure>
+                        <h2 class="text-[#121212CC] text-xl open-sans-medium">Strawberry</h2>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <figure><img src="images/fruit5.png" alt=""></figure>
+                        <h2 class="text-[#121212CC] text-xl open-sans-medium">Pomegranate</h2>
+                    </div>
                 </div>
             </div>
-        </div>
+
+        </section>
 
     </header>
+
+
+    <!-- THIS IS FOR TEST  -->
 
     <main>
 
@@ -202,6 +242,8 @@
     <footer>
 
     </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
 
 </body>
 
